@@ -9,5 +9,5 @@ const syncSeed = async () => {
 
 
 }
-
+module.exports = syncSeed
 syncSeed()
