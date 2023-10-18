@@ -9,7 +9,8 @@ app.use(express.urlencoded());
 app.post('/restaurants', async(req, res)=>{
     try{
     const rays = await Restaurant.create(req.body);
-    res.json(rays);
+    const restaurants = await Restaurant.findAll({})
+    res.json(restaurants);
     }
     catch(error){
         res.status(500).json({error: "Failed to create the item."})
